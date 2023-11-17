@@ -1,2 +1,2 @@
-def move_zeros(lst):
-    return lst
+def move_zeros(hhhhhh):
+    return hhhhhh
