@@ -12,7 +12,9 @@ def word_square(letters):
         return False
 
 
-#print(word_square('123456789'))
+
+
+print(word_square('123456789'))
 print(word_square('AAAAACEEELLRRRTT'))
 #print(word_square('SATORAREPOTENETOPERAROTAS'))
 #print(word_square('CARDAREAREARDART'))
