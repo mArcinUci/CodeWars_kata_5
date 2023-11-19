@@ -11,6 +11,7 @@ def word_square(letters):
     else:
         return False
 
+
 #print(word_square('123456789'))
 print(word_square('AAAAACEEELLRRRTT'))
 #print(word_square('SATORAREPOTENETOPERAROTAS'))
