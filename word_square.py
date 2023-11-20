@@ -1,21 +1,26 @@
 def word_square(letters):
+    letter_count = {}
     N = len(letters) ** 0.5
-    N = int(N)
-    matrix = [letters[i:i+N] for i in range(0,len(letters), N)]
-    flipped_characters = [''.join(row[::-1]) for row in matrix]
-    rotated_matrix = flipped_characters[::-1]
-    print(matrix)
-    print(rotated_matrix)
-    if matrix == rotated_matrix:
-        return True
-    else:
+    
+    if N != int(N):
         return False
+    for i in letters:
+        if i not in letter_count:
+            letter_count[i] = 1
+        else:
+            letter_count[i] +=1
+    count_of_single_character = sum(1 for value in letter_count.values() if value == 1)
+    print(letter_count)
+    if count_of_single_character > N:
+        return False
+    else:
+        return True
 
 
 
 
-print(word_square('123456789'))
-print(word_square('AAAAACEEELLRRRTT'))
+print(word_square('GHBEAEFGCIIDFHGG'))
+#print(word_square('AAAAACEEELLRRRTT'))
 #print(word_square('SATORAREPOTENETOPERAROTAS'))
 #print(word_square('CARDAREAREARDART'))
 #print(word_square('NOTSQUARE'))
