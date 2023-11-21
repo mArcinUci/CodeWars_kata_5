@@ -10,8 +10,10 @@ def word_square(letters):
         else:
             letter_count[i] +=1
     count_of_single_character = sum(1 for value in letter_count.values() if value == 1)
-    print(letter_count)
-    if count_of_single_character > N:
+    #print(N)
+    #print(len(letter_count))
+    #print(letter_count)
+    if count_of_single_character > N or len(letter_count) > 3*N:
         return False
     else:
         return True
@@ -19,9 +21,10 @@ def word_square(letters):
 
 
 
-print(word_square('GHBEAEFGCIIDFHGG'))
-#print(word_square('AAAAACEEELLRRRTT'))
-#print(word_square('SATORAREPOTENETOPERAROTAS'))
-#print(word_square('CARDAREAREARDART'))
-#print(word_square('NOTSQUARE'))
-#print(word_square('ABCD'))
+#print(word_square('LNGZRDVIPUFYXKOZOXZXQVBQFFVRDJYUSJYDOIUFXPUFJKFYI'))
+#print(word_square('LEQUEYIZLCZZSUUYOUCRTSKCMBRBWKAYSGHWWQYJSFEIFPZJRINGASJLJPYJIYXB'))
+#print(word_square('VCJZZDXQJAHRUBNKVJPCKQYWSXYQCIPTXFVDMCFPURGYNHBKWHAQYUFXMAOSKBCX'))
+#print(word_square('AENESOTDUAVWANOMODYAWBRWCMQJZXZEKJPNSEMAYHUBSFUNBAZFVBBWARFAUEDQ'))
+#print(word_square('ADWZNSESDYWFFXFCORDUZDEJUYXDRDNROWTJBUOAIHKVXCXYSEORAESRIUSMEOAQ'))
+#print(word_square('XXXJXXJERXXXJGXS'))
+#print(word_square('IIXKOZTKRKRXILTOSXUSRTFIZ'))
