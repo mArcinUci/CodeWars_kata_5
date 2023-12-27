@@ -4,16 +4,14 @@ def largest_sum(arr):
     if len(arr) == 0:
         return 0
     
-    largest_sum_list = []
-    for i in range(len(arr)):
-        largest_sum_for_i = []
-        new_arr = arr[i:]
-        for j in range(len(new_arr)+1):
-            new_arr_j = new_arr[:j]
-            largest_sum_for_i.append(sum(new_arr_j))
-        largest_sum_list.append(max(largest_sum_for_i))
-
-    return max(largest_sum_list)
+    max_sum = arr[0]
+    current_sum = arr[0]
+    
+    for i in range(1, len(arr)):
+        current_sum = max(arr[i], current_sum + arr[i])
+        max_sum = max(max_sum, current_sum)
+    
+    return max_sum
 
 
 print(largest_sum([1,2,3,4]))
