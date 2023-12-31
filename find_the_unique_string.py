@@ -2,6 +2,7 @@
 
 def find_uniq(arr):
     new_arr = [''.join(set(filter(str.isalpha, elem.lower()))) for elem in arr]
+    new_arr = [''.join(sorted(x)) for x in new_arr]
     example = new_arr[0] 
     for i in new_arr[1:]:
         if i not in example:
