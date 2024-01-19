@@ -12,13 +12,30 @@ def longest_comb(arr, command):
         present_longest_arr.append(first_element)
         current = i + 1
         while current < len(arr):
-            print(arr[current])
-            current += 1
-        
+            if pointer == True:
+                if arr[current] > present_longest_arr[-1]:
+                    present_longest_arr.append(arr[current])
+                current += 1
+            if pointer == False:
+                if arr[current] < present_longest_arr[-1]:
+                    present_longest_arr.append(arr[current])
+                current += 1
+        if len(present_longest_arr) > len(answer):
+            answer = present_longest_arr
+    
+    return answer if len(answer)>2 else []
 
       
 
     
 
-v = [9,2,3,4,7,8,0]
-print(longest_comb(v, '<<'))
+v = [9,-3,2,3,-2,4,7,8,0]
+print(longest_comb(v, '>'))
+
+
+'''
+                    if len(answer) == len(present_longest_arr):
+                        answer.append(present_longest_arr)
+                    if len(answer) < len(present_longest_arr):
+                        answer.append(present_longest_arr)
+'''
